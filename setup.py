@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import setuptools
+
 from py_eureka_client import version
 
 with open("README.md", "r") as fh:
@@ -16,10 +17,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/keijack/python-eureka-client",
     packages=["py_eureka_client"],
-    install_requires=[
-        "ifaddr",
-        "dnspython"
-    ],
+    install_requires=["ifaddr", "dnspython", "StrEnum"],
     classifiers=[
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",

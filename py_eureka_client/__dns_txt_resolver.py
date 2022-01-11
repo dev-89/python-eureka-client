@@ -22,9 +22,12 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
+from typing import List
+
 import dns.resolver
 
-def get_txt_dns_record(domain):
-    records = dns.resolver.resolve(domain, 'TXT')
+
+def get_txt_dns_record(domain) -> List(str):
+    records = dns.resolver.resolve(domain, "TXT")
     if len(records):
-        return str(records[0]).replace('"', "").split(' ')
+        return str(records[0]).replace('"', "").split(" ")
